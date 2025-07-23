@@ -1,0 +1,170 @@
+:root {
+    --color-primary: #e91e63;
+    --color-secondary: #ff80ab;
+    --color-background: #ffffff;
+    --color-text: #e91e63;
+    --color-text-light: #fff;
+    --color-border: #ff80ab;
+    --color-error: #ff0000;
+    --border-radius: 20px;
+}
+
+.dark-mode {
+    --color-primary: #007796;
+    --color-secondary: #00b3ce;
+    --color-background: #00283e;
+    --color-text: #ffffff;
+    --color-text-light: #ffffff;
+    --color-border: #004a66;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--color-primary);
+}
+
+.titulo-sesion {
+    color: var(--color-text);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input, button {
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid var(--color-border);
+    border-radius: var(--border-radius);
+}
+
+input:focus, button:focus {
+    outline: none;
+    border-color: var(--color-primary);
+}
+
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+    cursor: pointer;
+    border: none;
+}
+
+button:hover {
+    background-color: var(--color-secondary);
+}
+
+button:focus, a:focus {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+}
+
+.hidden {
+    display: none;
+}
+
+#errorMessage {
+    color: var(--color-error);
+    margin-top: 10px;
+}
+
+.floating-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.3s;
+    z-index: 1000;
+}
+
+.floating-button:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.heart {
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    background-color: var(--color-primary);
+    transform: rotate(45deg);
+    opacity: 0;
+    animation: floatHearts 5s infinite ease-in;
+    pointer-events: none;
+    z-index: 999;
+}
+
+.heart::before,
+.heart::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+}
+
+.heart::before {
+    left: 0;
+    top: -15px;
+}
+
+.heart::after {
+    top: 0;
+    left: 15px;
+}
+
+@keyframes floatHearts {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
