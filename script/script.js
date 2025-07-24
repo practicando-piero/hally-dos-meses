@@ -32,7 +32,7 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
     if (anniversaryDate === "2025-05-26") {
         // Guardar la fecha de aniversario en localStorage
         localStorage.setItem("anniversaryDate", anniversaryDate);
-        window.location.href = "dashboard.html"; // Redirige al dashboard
+        window.location.href = "noticia-aniversario.html"; // Redirige al dashboard
     } else {
         document.getElementById("errorMessage").classList.remove("hidden");
     }

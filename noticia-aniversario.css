@@ -1,0 +1,158 @@
+/* Estilo tipo periódico para invitación de boda */
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background: #fafafa;
+    margin: 0;
+    padding: 40px 0;
+}
+
+.newspaper {
+    background: #fff;
+    border-radius: 14px;
+    border: 2px solid #ddd;
+    max-width: 700px;
+    margin: 32px auto;
+    padding: 32px 32px 16px 32px;
+    box-shadow: 0 2px 12px #0001;
+}
+
+.header {
+    text-align: center;
+    border-bottom: 2px solid #222;
+    padding-bottom: 10px;
+    margin-bottom: 18px;
+}
+
+.header-title {
+    font-family: 'Old English Text MT', 'Blackletter', serif;
+    font-size: 2.5em;
+    letter-spacing: 2px;
+}
+
+.header-details {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1em;
+    margin-top: 6px;
+    color: #222;
+}
+
+.main-title {
+    font-size: 3em;
+    font-weight: bold;
+    text-align: center;
+    margin: 18px 0 0 0;
+    letter-spacing: 1px;
+}
+
+.subtitle {
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    margin: 0 0 18px 0;
+    letter-spacing: 1px;
+}
+
+.content-row {
+    display: flex;
+    gap: 18px;
+    margin-bottom: 18px;
+}
+
+.photo-section {
+    flex: 2;
+}
+
+.photo-section img {
+    width: 100%;
+    border-radius: 6px;
+    border: 1px solid #bbb;
+    margin-bottom: 10px;
+}
+
+.wedding-of-year {
+    font-style: italic;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.party-section {
+    flex: 1.2;
+    border: 1px solid #222;
+    border-radius: 6px;
+    padding: 10px 16px;
+    background: #f7f7f7;
+    font-size: 1em;
+}
+
+.party-section h3 {
+    font-size: 1.1em;
+    text-align: center;
+    margin: 0 0 10px 0;
+    font-weight: bold;
+    border-bottom: 1px solid #222;
+    padding-bottom: 4px;
+}
+
+.party-section strong {
+    display: block;
+    margin-top: 8px;
+}
+
+.lower-row {
+    display: flex;
+    gap: 18px;
+    margin-bottom: 12px;
+}
+
+.order-events, .our-story {
+    flex: 1;
+    border: 1px solid #222;
+    border-radius: 6px;
+    background: #f7f7f7;
+    padding: 12px 16px;
+    font-size: 1em;
+}
+
+.order-events h4, .our-story h4 {
+    margin: 0 0 8px 0;
+    font-size: 1.1em;
+    font-weight: bold;
+    border-bottom: 1px solid #222;
+    padding-bottom: 4px;
+}
+
+.order-events table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.order-events td {
+    padding: 3px 0;
+    vertical-align: top;
+}
+
+.footer {
+    text-align: center;
+    font-size: 1.1em;
+    border-top: 1px solid #bbb;
+    padding-top: 10px;
+    letter-spacing: 1px;
+    margin-top: 10px;
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+    .newspaper {
+        padding: 12px 2vw 12px 2vw;
+    }
+    .content-row, .lower-row {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .photo-section img {
+        max-height: 220px;
+        object-fit: cover;
+    }
+}
