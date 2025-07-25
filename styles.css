@@ -101,6 +101,13 @@ main {
     font-weight: normal;
     margin: 0.3em 0 0.5em 0;
     line-height: 1.2;
+    transition: text-decoration 0.2s;
+    cursor: pointer;
+}
+
+.noticia-info h3:hover,
+.noticia-info h3:focus {
+    text-decoration: underline;
 }
 
 .autor {
